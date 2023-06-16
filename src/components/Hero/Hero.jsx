@@ -6,7 +6,16 @@ const Hero = () => {
   return (
     <div className='hero-section-container'>
       <Navbar />
-      Hero
+      <div className='hero-section'>
+        
+        <div className='hero-left'>
+          <h1>Hello, I'm Thanh. Junior Web Developer.</h1>
+          <p></p>
+        </div>
+        <div className='hero-right'>
+          <img src="../public/img/me.png" alt="Thanh's Memoji" />
+        </div>
+      </div>
     </div>
   )
 }
