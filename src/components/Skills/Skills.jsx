@@ -1,8 +1,9 @@
 import React from 'react'
+import './Skills.css'
 
 const Skills = () => {
   return (
-    <div>
+    <div className='skills-section-container'>
       Skills
     </div>
   )

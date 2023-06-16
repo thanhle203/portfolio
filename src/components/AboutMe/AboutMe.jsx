@@ -1,8 +1,9 @@
 import React from 'react'
+import './AboutMe.css'
 
 const AboutMe = () => {
   return (
-    <div>
+    <div className='aboutme-section-container'>
       AboutMe
     </div>
   )

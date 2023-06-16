@@ -1,0 +1,25 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 6rem;
+}
+
+.logo {
+    margin-right: 2rem;
+}
+
+.logo img {
+    width: 10%;
+    height: 10%;
+}
+
+.navbar-links {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-sections a {
+    text-decoration: none;
+    color: white;
+}

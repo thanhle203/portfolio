@@ -1,8 +1,7 @@
-import Hero from "./components/Hero"
-import AboutMe from "./components/AboutMe"
-import Skills from "./components/Skills"
-import Projects from "./components/Projects"
-import styled from 'styled-components'
+import Hero from "./components/Hero/Hero"
+import AboutMe from "./components/AboutMe/AboutMe"
+import Skills from "./components/Skills/Skills"
+import Projects from "./components/Projects/Projects"
 import "./App.css"
 
 function App() {

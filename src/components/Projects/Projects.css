@@ -1,0 +1,4 @@
+.projects-section-container {
+    height: 100vh;
+    scroll-snap-align: center;
+}
