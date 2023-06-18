@@ -3,7 +3,7 @@ import './Projects.css'
 
 const Projects = () => {
   return (
-    <div className='projects-section-container'>
+    <div className='projects-section-container' id='projects'>
       Projects
     </div>
   )
