@@ -44,7 +44,7 @@ const ListItem = styled.li`
   font-weight: bold;
   cursor: pointer;
   color: transparent;
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 3px #fff;
   position: relative;
 
   &::after {
