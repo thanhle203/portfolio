@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+//import './Skills.css';
 import styled, { keyframes } from 'styled-components';
 
 const data = [
@@ -8,10 +9,6 @@ const data = [
   "Toolkits",
   "Database",
 ]
-
-const gradientChange = keyframes`
-  
-`
 
 const Container = styled.div`
   height: 100vh;
@@ -55,32 +52,37 @@ const ListItem = styled.li`
     overflow: hidden;
     color: #fff;
     white-space: nowrap;
-    width: 0%;
-  }
-
-  &:hover::after {
-    animation: loadingText 0.5s linear both;
-  }
-
-  @keyframes loadingText {
-    to {
-      width: 100%;
-    }
+    width: ${(props) => (props.animate ? '100%' : '0%')};
+    transition: width 0.5s linear;
   }
 
 `
+
 const Right = styled.div`
   flex: 1;
 `
 
 const Skills = () => {
+  
+  const [animateItem, setAnimateItem] = useState(null);
+
+  const handleClick = (item) => {
+    if ( animateItem === item) {
+      setAnimateItem(null);
+    }
+    else {
+      setAnimateItem(item);
+    }
+    
+  }
+  
   return (
     <Container>
       <Section id='skills'>
         <Left>
           <List>
             {data.map((item) => (
-              <ListItem key={item} text={item}>{item}</ListItem>
+              <ListItem key={item} text={item} animate={animateItem === item} onClick={() => handleClick(item)}>{item}</ListItem>
             ))}
           </List>
         </Left>
