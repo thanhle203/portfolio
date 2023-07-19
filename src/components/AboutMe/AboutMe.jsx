@@ -11,7 +11,6 @@ const AboutMe = () => {
         </div>
 
         <div className='aboutme-right'>
-          <h1>About Me</h1>
           <h2>I am a junior web developer aspiring to become a full stack developer. 
             With a strong foundation in frontend languages such as HTML, CSS, JavaScript, and React.js, as well as some backend languages like Python and Java, I aim to create dynamic and user-friendly online experiences.
             I'm familiar with some essential web development toolkits like MongoDB, SQL, Git, and other toolkits such as scikit-learn, NumPy, and Pandas for web-scraping.

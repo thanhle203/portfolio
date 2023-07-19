@@ -22,9 +22,14 @@
 .aboutme-right {
     flex: 1;
     display: flex;
+    margin: 25vh 0;
+    padding: 0px 5vh;
+    border: none;
+    border-radius: 10px;
     flex-direction: column;
     justify-content: center;
     background-color: #d3b489;
+    box-shadow: 10px 10px #999966;
 }
 
 .aboutme-right h1 {
