@@ -1,4 +1,109 @@
-.projects-section-container {
-    height: 100vh;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.projects-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     scroll-snap-align: center;
+}
+
+.projects-section {
+    margin: 0 40px;
+}
+
+.projects-image-content, .projects-cards-content {
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-image-content {
+    position: relative;
+    row-gap: 5px;
+    border-radius: 25px 25px 0 25px;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.overlay::before, .overlay::after {
+    
+}
+
+.overlay img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    border-radius: 25px 25px 0 25px;
+}
+
+.projects-cards {
+    width: 320px;
+    border-radius: 25px;
+    background-color: #d3b489;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-cards-image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.projects-cards-image .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.description {
+    font-size: 16px;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.buttons:first-child {
+    margin-right: auto;
+}
+
+button {
+    margin: 10px;
+    padding: 8px;
+    font-weight: 600;
+    background-color: #da4ea2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #d86cad;
 }
