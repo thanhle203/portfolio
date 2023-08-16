@@ -18,7 +18,7 @@ const Navbar = () => {
             </div>
 
             <div>
-                <a href='./Resume2023.pdf' download="ThanhLe-Resume">
+                <a href='./Resume-2023.pdf' download="ThanhLe-Resume">
                     <button>Resume</button>
                 </a>
             </div>
