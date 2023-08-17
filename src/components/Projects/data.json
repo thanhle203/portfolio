@@ -1,0 +1,14 @@
+[
+    {
+        "id": "1",
+        "name": "GPT-3",
+        "desc": "A responsive website about GPT-3 that is supposed to inform about the potentials of AI and request backers to help fund the vision.",
+        "img": "./img/gpt3-img.png"
+    },
+    {
+        "id": "2",
+        "name": "Wedding RSVP",
+        "desc": "A RSVP website for a wedding where guests can check necessary information and RSVP for the wedding.",
+        "img": "./img/wedding-rsvp.jpg"
+    }
+]

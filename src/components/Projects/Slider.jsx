@@ -13,7 +13,7 @@ import './styles.css';
 // import required modules
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
-export const Slider = () => {
+export const Slider = ({data}) => {
   return (
     <>
       <Swiper
@@ -34,11 +34,12 @@ export const Slider = () => {
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
+        {data.map((item) => (
+          <SwiperSlide>
           <div className='projects-cards'>
             <div className='projects-image-content'>
               <span className='overlay'>
-                <img src="./img/gpt3-img.png" alt="" className='card-img' />
+                <img src={item.img} alt="" className='card-img' />
               </span>
 
               <div className='projects-cards-image'>
@@ -47,8 +48,8 @@ export const Slider = () => {
             </div>
 
             <div className='projects-cards-content'>
-              <h2 className='name' key={1} >GPT-3</h2>
-              <p className="description" key={2} >A fake responsive website about GPT-3 that is supposed to inform about the potentials of AI and request backers to help fund the vision.</p>
+              <h2 className='name' key={item.id} >{item.name}</h2>
+              <p className="description" key={item.desc} >{item.desc}</p>
               
               <div className='buttons'>
                 <button className='button-1'>View Code</button>
@@ -57,30 +58,7 @@ export const Slider = () => {
             </div>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <img src="./img/wedding-rsvp.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="./img/gpt3-img.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="./img/wedding-rsvp.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="./img/gpt3-img.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="./img/wedding-rsvp.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="./img/gpt3-img.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="./img/wedding-rsvp.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="./img/gpt3-img.png" />
-        </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );

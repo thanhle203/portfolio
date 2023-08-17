@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
 //import './Skills.css';
 import styled, { keyframes } from 'styled-components';
-
-const data = [
-  "Front End",
-  "Back End",
-  "Frameworks",
-  "Toolkits",
-  "Database",
-]
+import data from './languages.json'
 
 const Container = styled.div`
   height: 100vh;
@@ -82,7 +75,7 @@ const Skills = () => {
         <Left>
           <List>
             {data.map((item) => (
-              <ListItem key={item} text={item} animate={animateItem === item} onClick={() => handleClick(item)}>{item}</ListItem>
+              <ListItem key={item} text={item.name} animate={animateItem === item.name} onClick={() => handleClick(item.name)}>{item.name}</ListItem>
             ))}
           </List>
         </Left>
