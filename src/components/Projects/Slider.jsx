@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -52,8 +53,8 @@ export const Slider = ({data}) => {
               <p className="description" key={item.desc} >{item.desc}</p>
               
               <div className='buttons'>
-                <button className='button-1'>View Code</button>
-                <button className='button-2'>Live Demo</button>
+                <button className='button-1'><a href={item.code} target='_blank'>View Code</a></button>
+                <button className='button-2'><a href={item.link} target='_blank'>Live demo</a></button>
               </div>
             </div>
           </div>

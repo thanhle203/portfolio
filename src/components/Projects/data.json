@@ -1,14 +1,26 @@
 [
     {
         "id": "1",
-        "name": "GPT-3",
-        "desc": "A responsive website about GPT-3 that is supposed to inform about the potentials of AI and request backers to help fund the vision.",
-        "img": "./img/gpt3-img.png"
+        "name": "Wedding RSVP",
+        "desc": "A RSVP website for a wedding where guests can check necessary information and RSVP for the wedding.",
+        "img": "./img/wedding-rsvp.jpg",
+        "link": "https://thanhle203.github.io/weddingrsvp/",
+        "code": "https://github.com/thanhle203/weddingrsvp"
     },
     {
         "id": "2",
-        "name": "Wedding RSVP",
-        "desc": "A RSVP website for a wedding where guests can check necessary information and RSVP for the wedding.",
-        "img": "./img/wedding-rsvp.jpg"
+        "name": "GPT-3",
+        "desc": "A responsive website about GPT-3 that is supposed to inform about the potentials of AI and request backers to help fund the vision.",
+        "img": "./img/gpt3-img.png",
+        "link": "https://thanhle203.github.io/gpt3-project/",
+        "code": "https://github.com/thanhle203/gpt3-project"
+    },
+    {
+        "id": "3",
+        "name": "TeaRex Website",
+        "desc": "Along with a team of 8, developing a website for a local boba shop. Still under development.",
+        "img": "./img/tearex.jpg",
+        "link": "https://tea-rex.vercel.app/",
+        "code": "https://github.com/khanhtruong0808/tea-rex"
     }
 ]
