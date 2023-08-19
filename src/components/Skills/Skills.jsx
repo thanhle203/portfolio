@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 //import './Skills.css';
 import styled, { keyframes } from 'styled-components';
 import data from './languages.json'
+import ConfigIcon from './ConfigIcon';
 
 const Container = styled.div`
   height: 100vh;
@@ -60,13 +61,22 @@ const Skills = () => {
   const [animateItem, setAnimateItem] = useState(null);
 
   const handleClick = (item) => {
-    if ( animateItem === item) {
+    if ( animateItem === item.name) {
       setAnimateItem(null);
     }
     else {
-      setAnimateItem(item);
+      setAnimateItem(item.name);
     }
     
+  }
+
+  const itemMatch = (item) => {
+    if (item.name === animateItem) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
   
   return (
@@ -75,13 +85,23 @@ const Skills = () => {
         <Left>
           <List>
             {data.map((item) => (
-              <ListItem key={item} text={item.name} animate={animateItem === item.name} onClick={() => handleClick(item.name)}>{item.name}</ListItem>
+              <ListItem key={item} text={item.name} animate={animateItem === item.name} onClick={() => handleClick(item)}>{item.name}</ListItem>
             ))}
           </List>
         </Left>
 
         <Right>
-
+              {data.map((item) => {
+                {
+                  itemMatch(item) ? (
+                    item.icon.map((icons) => {
+                      <ConfigIcon>
+                        { icons }
+                      </ConfigIcon>
+                    })
+                  ) : (null)
+                }
+              })}
         </Right>
       </Section>
     </Container>
