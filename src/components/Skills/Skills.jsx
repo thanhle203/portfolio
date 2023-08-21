@@ -52,8 +52,17 @@ const ListItem = styled.li`
 
 `
 
+const RightSideListItem = styled.li`
+  font-size: 70px;
+  font-weight: bolder;
+  color: whitesmoke;
+  position: relative;
+`
+
 const Right = styled.div`
   flex: 1;
+  display: flex;
+  align-items: center;
 `
 
 const Skills = () => {
@@ -85,23 +94,21 @@ const Skills = () => {
         <Left>
           <List>
             {data.map((item) => (
-              <ListItem key={item} text={item.name} animate={animateItem === item.name} onClick={() => handleClick(item)}>{item.name}</ListItem>
+              <ListItem key={item.id} text={item.name} animate={animateItem === item.name} onClick={() => handleClick(item)}>{item.name}</ListItem>
             ))}
           </List>
         </Left>
 
         <Right>
-              {data.map((item) => {
-                {
-                  itemMatch(item) ? (
-                    item.icon.map((icons) => {
-                      <ConfigIcon>
-                        { icons }
-                      </ConfigIcon>
-                    })
-                  ) : (null)
-                }
-              })}
+          <List>
+            {data.map((item) => (
+              itemMatch(item) ? (
+                item.skill.map((skill, index) => (
+                  <RightSideListItem key={`${item.id}-${index}`}>{skill}</RightSideListItem>
+                ))
+              ) : null
+            ))}
+          </List>
         </Right>
       </Section>
     </Container>

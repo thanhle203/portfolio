@@ -1,17 +1,49 @@
 [
     {
-        "name": "Front End"
+        "id": 1,
+        "name": "Front End",
+        "skill": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "React",
+            "XML",
+            "Threejs"
+        ]
     },
     {
-        "name": "Back End"
+        "id": 2,
+        "name": "Back End",
+        "skill": [
+            "Python",
+            "SQL",
+            "Prisma",
+            "Nodejs"
+        ]
     },
     {
-        "name": "Frameworks"
+        "id": 3,
+        "name": "Frameworks",
+        "skill": [
+            "Django"
+        ]
     },
     {
-        "name": "Toolkits"
+        "id": 4,
+        "name": "Toolkits",
+        "skill": [
+            "Git",
+            "Github",
+            "Jira",
+            "Numpy",
+            "Scikitlearn"
+        ]
     },
     {
-        "name": "Database"
+        "id": 5,
+        "name": "Database",
+        "skill": [
+            "MySQL"
+        ]
     }
 ]
