@@ -10,7 +10,7 @@ const AboutMe = () => {
         
         <div className='aboutme-left'>
           <Canvas>
-            <OrbitControls />
+            <OrbitControls enableZoom={false} autoRotate />
             <mesh>
               <boxGeometry args={[2,2,2]} />
             </mesh>
