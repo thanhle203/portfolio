@@ -1,7 +1,8 @@
 import React from 'react'
 import './AboutMe.css'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
+import { OrbitControls, Text, RenderTexture, PerspectiveCamera } from '@react-three/drei'
+import Cube from './Cube'
 
 const AboutMe = () => {
   return (
@@ -9,11 +10,11 @@ const AboutMe = () => {
       <div className='aboutme-section'>
         
         <div className='aboutme-left'>
-          <Canvas>
-            <OrbitControls enableZoom={false} autoRotate />
-            <mesh>
-              <boxGeometry args={[2,2,2]} />
-            </mesh>
+          <Canvas camera={{fov: 59, position: [3.5, 3.5, 3.5]}}>
+            <OrbitControls enableZoom={false} />
+            <ambientLight intensity={4} />
+            <directionalLight position={[3,2,1]} />
+            <Cube />
           </Canvas>
         </div>
 
